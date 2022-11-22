@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Arithmetic Operation</title>
+  </head>
+  <body>
+    <div class="AP">
+      <div class="input">
+        <label for="one-input">X:</label>
+        <input
+          type="number"
+          class="one"
+          id="one"
+          placeholder="Enter  digits"
+        /><br />
+        <label for="two-input">Y:</label>
+        <input
+          type="number"
+          class="two"
+          id="two"
+          placeholder="Enter only digits"
+        />
+      </div>
+      <div class="output">
+        <label for="output">Output:</label>
+        <output type="number" class="display" id="display" />
+      </div>
+      <div class="buttons">
+        <input type="button" onclick="add()" id="add" value="+" />
+        <input type="button" onclick="sub()" id="sub" value="-" />
+        <input type="button" onclick="mul()" id="mul" value="*" />
+        <input type="button" onclick="div()" id="div" value="/" />
+      </div>
+    </div>
+    <script>
+      function add() {
+        let inp1 = parseFloat(document.getElementById("one").value);
+        let inp2 = parseFloat(document.getElementById("two").value);
+
+        document.getElementById("display").innerHTML = inp1 + inp2;
+        console.log(document.getElementById("display").innerHTML);
+      }
+      function sub() {
+        let inp1 = document.getElementById("one").value;
+        let inp2 = document.getElementById("two").value;
+
+        document.getElementById("display").innerHTML = inp1 - inp2;
+        console.log(document.getElementById("display").innerHTML);
+      }
+      function mul() {
+        let inp1 = document.getElementById("one").value;
+        let inp2 = document.getElementById("two").value;
+
+        document.getElementById("display").innerHTML = inp1 * inp2;
+        console.log(document.getElementById("display").innerHTML);
+      }
+      function div() {
+        let inp1 = document.getElementById("one").value;
+        let inp2 = document.getElementById("two").value;
+
+        document.getElementById("display").innerHTML = inp1 / inp2;
+        console.log(document.getElementById("display").innerHTML);
+      }
+    </script>
+  </body>
+</html>
